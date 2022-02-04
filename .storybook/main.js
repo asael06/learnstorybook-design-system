@@ -4,7 +4,10 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/preset-create-react-app",
-    "@storybook/addon-interactions",
+    "@storybook/testing-library",
   ],
   framework: "@storybook/react",
+  core: {
+    builder: "webpack5",
+  },
 };
