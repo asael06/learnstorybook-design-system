@@ -1,5 +1,5 @@
 {
-  "name": "storybook-app",
+  "name": "contentoh-components-library",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env BABEL_ENV=production babel src -d dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
@@ -50,7 +50,18 @@
       "last 1 safari version"
     ]
   },
+  "babel": {
+    "presets": [
+      [
+        "react-app",
+        {
+          "absoluteRuntime": false
+        }
+      ]
+    ]
+  },
   "devDependencies": {
+    "@babel/cli": "^7.17.0",
     "@storybook/addon-actions": "^6.4.18",
     "@storybook/addon-essentials": "^6.4.18",
     "@storybook/addon-links": "^6.4.18",
@@ -59,7 +70,13 @@
     "@storybook/node-logger": "^6.4.18",
     "@storybook/preset-create-react-app": "^4.0.0",
     "@storybook/react": "^6.4.18",
+    "auto": "^10.32.6",
     "chromatic": "^6.4.3",
+    "cross-env": "^7.0.3",
     "webpack": "^5.68.0"
-  }
+  },
+  "main": "index.js",
+  "repository": "git@github.com:asael06/learnstorybook-design-system.git",
+  "author": "asael06 <asael.mb@hotmail.com>",
+  "license": "MIT"
 }
